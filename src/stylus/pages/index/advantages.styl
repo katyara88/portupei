@@ -1,0 +1,108 @@
+.advantages
+	overflow hidden
+
+	&__wrapper
+		margin-bottom 21px
+		padding 46px 20px 0
+
+		display flex
+		flex-direction column
+		align-items center
+
+		color $text
+		text-align center
+
+	&__title
+		margin 0
+		margin-bottom 18px
+		padding-bottom 5px
+
+		position relative
+
+		font-size 36px
+		line-height 1
+
+		text-transform uppercase
+
+		&:before
+			position absolute
+			left 45.5%
+			bottom 0
+
+			width 90px
+			height 3px
+
+			content ''
+			background-color $black
+
+	&__text
+		margin 0
+
+		font-size 16px
+		line-height 30px
+		font-family $Regular
+
+		&:not(:last-child)
+			margin-bottom 10px
+
+	&__image
+		width 100%
+
+@media(max-width 960px)
+	.advantages
+		
+		&__image
+			height 200px
+
+			object-fit cover
+
+@media(max-width 768px)
+	.advantages
+
+		&__wrapper
+			margin-bottom 15px
+			padding 30px 20px 0
+
+		&__title
+			margin-bottom 15px
+			padding-bottom 0
+
+			font-size 30px
+
+			&:before
+				display none
+
+		&__text
+			font-size 16px
+			line-height 30px
+
+			&:not(:last-child)
+				margin-bottom 10px
+
+@media(max-width 660px)
+	.advantages
+		
+		&__image
+			height 170px
+
+@media(max-width 470px)
+	.advantages
+
+		&__wrapper
+			margin-bottom 15px
+			padding 30px 20px 0
+
+		&__title
+			margin-bottom 10px
+
+			font-size 24px
+
+		&__text
+			font-size 14px
+			line-height 24px
+
+			&:not(:last-child)
+				margin-bottom 5px
+
+		&__image
+			height 150px

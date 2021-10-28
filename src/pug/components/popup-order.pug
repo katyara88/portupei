@@ -1,0 +1,22 @@
+.popup-order
+	.popup-order__background
+	.popup-order__container
+		img.popup-order__image(src="images/potrupeya-img3.jpg", alt="")
+		.popup-order__content
+			.popup-order__close
+				img.popup-order__icon(src="images/close.png", alt="")
+			h3.popup-order__title Портупея “Джони Миллер”
+			.popup-order__price
+				span.popup-order__price-old 4990 р.
+				span.popup-order__price-new 2990 р.
+			form.popup-order__form(action="#")
+				select.popup-order__select
+					option.popup-order__select-option(value="XS" selected) XS
+					option.popup-order__select-option(value="S") S
+					option.popup-order__select-option(value="M") M
+					option.popup-order__select-option(value="L") L
+					option.popup-order__select-option(value="XL") XL
+					option.popup-order__select-option(value="XXL") XXL
+				input.popup-order__input(type="text" name="name" placeholder="Введите Ваше имя" required)
+				input.popup-order__input(type="tel" name="phone" placeholder="Введите Ваш телефон" required)
+				button.popup-order__button(type="submit") Оформить заказ

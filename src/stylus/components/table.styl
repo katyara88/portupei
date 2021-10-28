@@ -1,0 +1,98 @@
+.table
+	padding 30px
+
+	display block
+	width 100%
+
+	background-color $white
+	box-shadow 0px 0px 30px rgba(0, 0, 0, 0.15)
+	border-collapse collapse
+
+	&__body
+		display block
+		width 100%
+
+	&__row
+		padding 0 15px 0 29px
+
+		display flex
+		align-items center
+		justify-content space-between
+
+		width 100%
+		height 41px
+
+		font-size 14px
+		line-height 1
+		font-family $Regular
+
+		color $text
+		background-color #f3f3f3
+
+		&:nth-child(2n)
+			background-color $white
+
+	&__header
+		padding-right 10px
+
+		font-family $Bold
+		width 22%
+
+		text-align left
+
+	&__data-cell
+		padding 0 10px
+		width 13%
+
+		&-bold
+			font-family $Bold
+
+@media(max-width 768px)
+	.table
+		padding 15px
+
+		&__row
+			padding 0 5px
+
+			height 34px
+
+			font-size 12px
+
+		&__header
+			padding-right 10px
+
+		&__data-cell
+			padding 0 10px
+
+			text-align left
+
+@media(max-width 640px)
+	.table
+		width calc(100% + 40px)
+		max-width calc(100% + 40px)
+
+@media(max-width 580px)
+	.table
+		padding 0
+
+		&__row
+			font-size 10px
+
+		&__header
+			padding-right 5px
+
+		&__data-cell
+			padding 0 5px
+
+@media(max-width 470px)
+	.table
+
+		&__header
+			width 19%
+
+			word-wrap break-word
+
+		&__data-cell
+			width 13.5%
+
+			text-align right

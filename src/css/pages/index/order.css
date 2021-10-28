@@ -1,0 +1,190 @@
+.order {
+  overflow: hidden;
+  background-color: $peach;
+}
+.order__wrapper {
+  padding: 71px 20px 120px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: $text;
+  text-align: center;
+}
+.order__title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  height: 100%;
+  position: relative;
+  font-size: 60px;
+  line-height: 1;
+  font-family: $Bold;
+  text-transform: uppercase;
+}
+.order__title:before {
+  position: absolute;
+  left: 45%;
+  bottom: 0;
+  width: 90px;
+  height: 3px;
+  content: '';
+  background-color: $black;
+}
+.order__content {
+  width: 100%;
+}
+.order__list {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+.order__list:before {
+  position: absolute;
+  left: 13%;
+  top: 66.5%;
+  width: 75%;
+  height: 2px;
+  content: '';
+  background-color: $lightGrey;
+}
+.order__item {
+  -webkit-flex-basis: 25%;
+      -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.order__image {
+  margin-bottom: 32px;
+  width: 136px;
+  height: 136px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: $pink;
+  border-radius: 50%;
+  border: 6px solid #d579a1;
+  position: relative;
+}
+.order__image:before {
+  position: absolute;
+  left: 50%;
+  bottom: -33%;
+  z-index: 10;
+  width: 10px;
+  height: 10px;
+  content: '';
+  background-color: $lightGrey;
+  border-radius: 50%;
+}
+.order__image:after {
+  position: absolute;
+  left: 48%;
+  bottom: -35.5%;
+  z-index: 10;
+  width: 16px;
+  height: 16px;
+  content: '';
+  background-color: $lightGrey;
+  opacity: 0.3;
+  border-radius: 50%;
+}
+.order__descr {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $Regular;
+  color: $text;
+}
+@media (max-width: 960px) {
+  .order__list {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .order__list:before {
+    display: none;
+  }
+  .order__item {
+    margin-bottom: 40px;
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+  }
+  .order__item:last-child,
+  .order__item:nth-child(3) {
+    margin-bottom: 0;
+  }
+  .order__image:before,
+  .order__image:after {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .order__wrapper {
+    padding: 40px 20px;
+  }
+  .order__title {
+    margin-bottom: 15px;
+    padding-bottom: 0;
+    font-size: 40px;
+  }
+  .order__title:before {
+    display: none;
+  }
+  .order__item {
+    margin-bottom: 20px;
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+  .order__item:nth-child(3) {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 470px) {
+  .order__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+}

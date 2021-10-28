@@ -116,6 +116,7 @@
   border: 2px solid $white;
   color: $white;
   text-transform: uppercase;
+  cursor: pointer;
   -webkit-transition-property: background-color, color;
   -o-transition-property: background-color, color;
   transition-property: background-color, color;

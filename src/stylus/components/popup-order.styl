@@ -1,0 +1,343 @@
+
+.popup-order
+	position fixed
+	z-index -1
+	top 0
+	left 0
+	opacity 0
+	visibility hidden
+
+	width 100%
+	height 100%
+
+	transition .3s
+
+	&-active
+		z-index 20
+		opacity 1
+		visibility visible
+
+	&__background
+		position fixed
+		top 0
+		left 0
+		z-index 15
+
+		width 100%
+		height 100vh
+
+		background rgba(0, 0, 0, 0.5)
+
+		transition .3s
+
+	&__container
+		position absolute
+		top 105px
+		left calc(50% - 320px)
+		z-index 20
+
+		max-height 350px
+		width 640px
+
+		display flex
+
+		background-color $white
+
+	&__image
+		display block
+		width 100%
+		min-height 100%
+
+		flex-basis 50%
+
+		object-fit cover
+
+	&__content
+		padding 30px 20px 25px
+
+		flex-basis 50%
+
+	&__close
+		position absolute
+		top 0
+		right 0
+		z-index -1
+
+		display flex
+		align-items center
+		justify-content center
+
+		width 30px
+		height 30px
+
+		opacity 0
+		visibility hidden
+
+		cursor pointer
+
+		transition .3s
+
+		will-change transform
+
+		&-active
+			z-index 20
+			opacity 1
+			visibility visible
+
+		&:hover
+			transform rotate(180deg)
+
+	&__title
+		margin 0
+
+		min-height 36px
+
+		font-size 18px
+		line-height 1
+		font-family $Bold
+
+		color $text
+		text-align center
+
+	&__price
+		margin-bottom 10px
+
+		display flex
+		align-items center
+		justify-content center
+
+		& span
+			display block
+
+		&-old
+			margin-right 20px
+
+			font-size 24px
+			line-height 36px
+			font-family $Regular
+
+			color $grey
+			text-decoration line-through
+
+		&-new
+			font-size 30px
+			line-height 35px
+			font-family $Bold
+
+			color $pink
+
+	&__form
+		display block
+		width 100%
+
+	&__select
+		margin-bottom 10px
+
+		display flex
+		align-items center
+		justify-content center
+		width 100%
+		height 45px
+
+		font-size 18px
+		line-height 36px
+		font-family $Regular
+
+		border 1px solid $lightGrey
+		text-align center
+		outline 0
+		cursor pointer
+
+	&__input
+		margin-bottom 10px
+
+		display block
+		width 100%
+		height 45px
+
+		font-size 18px
+		line-height 36px
+		font-family $Regular
+
+		color $text
+		border 1px solid $lightGrey
+		text-align center
+		outline 0
+		cursor pointer
+
+		&::-webkit-input-placeholder
+			font-size 16px
+			line-height 36px
+			font-family $Regular
+
+			color #8c8c8c
+		&::-moz-placeholder
+			font-size 16px
+			line-height 36px
+			font-family $Regular
+
+			color #8c8c8c
+		&:-moz-placeholder
+			font-size 16px
+			line-height 36px
+			font-family $Regular
+
+			color #8c8c8c
+		&:-ms-input-placeholder
+			font-size 16px
+			line-height 36px
+			font-family $Regular
+
+			color #8c8c8c
+
+	&__button
+		padding 15px
+
+		display flex
+		align-items center
+		justify-content center
+
+		width 100%
+		height 60px
+
+		font-size 18px
+		line-height 30px
+		font-family $Semibold
+
+		color $white
+		background linear-gradient(0deg, #4776E6 0%, #8E54E9 100%), #E8A900
+		box-shadow 0px 4px 0px #375CB3
+		border none
+		border-radius 3px
+		cursor pointer
+		text-transform uppercase
+
+		transition-property transform
+		transition-duration .3s
+		
+		will-change transform
+
+		&:active
+			transform scale(0.9)
+
+@media (max-width 940px)
+	.popup-order
+
+		&__container
+			top 80px
+			left 0
+
+			max-height 500px
+			width 100%
+
+		&__content
+			display flex
+			flex-direction column
+			justify-content center
+
+@media(max-width 768px)
+	.popup-order
+
+		&__content
+			padding 15px
+
+		&__title
+			min-height 32px
+
+			font-size 16px
+
+		&__price
+			margin-bottom 10px
+
+			&-old
+				margin-right 15px
+
+				font-size 20px
+				line-height 32px
+
+			&-new
+				font-size 26px
+				line-height 38px
+
+		&__select
+			height 30px
+
+			font-size 14px
+			line-height 20px
+
+		&__input
+			height 30px
+
+			font-size 14px
+			line-height 20px
+
+			&::-webkit-input-placeholder
+				font-size 14px
+				line-height 20px
+
+				color #8c8c8c
+			&::-moz-placeholder
+				font-size 14px
+				line-height 20px
+
+			&:-moz-placeholder
+				font-size 14px
+				line-height 20px
+
+			&:-ms-input-placeholder
+				font-size 14px
+				line-height 20px
+
+		&__button
+			padding 10px
+
+			height 45px
+
+			font-size 16px
+			line-height 24px
+
+@media(max-width 640px)
+	.popup-order
+			
+		&__background
+			display none
+
+		&__container
+			flex-wrap wrap
+
+			max-height none
+			height 100vh
+
+			top 0
+			overflow-x scroll
+
+			&::-webkit-scrollbar
+				display none
+
+		&__image
+			min-height auto
+			max-height 550px
+
+			flex-basis 100%
+
+		&__content
+			flex-basis 100%
+
+		&__close
+			background-color $white
+
+			&:hover
+				transform none
+
+@media(max-width 470px)
+	.popup-order
+
+		&__image
+			max-height 450px
+
+
+@media(max-width 375px)
+	.popup-order
+
+		&__image
+			max-height 350px

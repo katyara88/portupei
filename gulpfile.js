@@ -40,6 +40,9 @@ gulp.task('pug', () => {
 gulp.task('scripts', () => {
 	return gulp.src([
 		'src/vendor/jquery/jquery.min.js',
+		'src/vendor/tweenmax/src/minified/TweenMax.min.js',
+		'src/vendor/smoothscrolliOS/smoothscroll.js',
+		'src/vendor/smoothscroll/smooth-scroll.polyfills.min.js',
 	])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())

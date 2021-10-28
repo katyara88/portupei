@@ -1,0 +1,151 @@
+.catalog
+	overflow hidden
+
+	background-color $white
+
+	&__wrapper
+		margin-bottom 80px
+		padding 46px 20px 0
+
+		display flex
+		flex-direction column
+		align-items center
+
+		color $text
+		text-align center
+
+	&__title
+		margin 0
+		margin-bottom 30px
+		padding-bottom 27px
+
+		width 100%
+
+		position relative
+
+		font-size 36px
+		line-height 1
+		font-family $Bold
+
+		text-transform uppercase
+
+		&:before
+			position absolute
+			left 45.5%
+			bottom 0
+
+			width 90px
+			height 3px
+
+			content ''
+			background-color $black
+
+	&__buttons
+		width 100%
+
+		display flex
+		justify-content center
+
+	&__button
+		padding 0
+
+		height 67px
+		width 100%
+		max-width 310px
+
+		display flex
+		align-items center
+		justify-content center
+		font-size 18px
+		line-height 36px
+		font-family $Regular
+
+		border none
+		background-color #F3F3F3
+		color $text
+		text-transform uppercase
+		cursor pointer
+
+		transition-property background-color, color
+		transition-duration .3s
+
+		&:hover
+			color $white
+			background-color $pink
+		
+		&.active
+			color $white
+			background-color $pink
+	
+	&__info
+		padding-top 20px
+
+	&__list
+		margin 0 -10px
+
+		display flex
+		flex-wrap wrap
+	
+	&__item
+		padding 10px
+
+		flex-basis 33.333%
+
+@media(max-width 960px)
+	.catalog
+
+		&__item
+			flex-basis 50%
+
+@media(max-width 768px)
+	.catalog
+
+		&__wrapper
+			margin-bottom 40px
+			padding 30px 20px 0
+
+		&__title
+			margin-bottom 15px
+			padding-bottom 0
+
+			font-size 30px
+
+			&:before
+				display none
+
+		&__buttons
+			flex-direction column
+			align-items center
+
+		&__button
+			height 60px
+			font-size 16px
+			line-height 28px
+
+			&:not(:last-child)
+				margin-bottom 15px
+
+@media(max-width 660px)
+	.catalog
+
+		&__list
+			margin 0
+
+		&__item
+			padding 0
+
+			flex-basis 100%
+
+			&:not(:last-child)
+				margin-bottom 10px
+
+@media(max-width 470px)
+	.catalog
+
+		&__wrapper
+			padding 30px 20px 0
+
+		&__title
+			margin-bottom 10px
+
+			font-size 24px

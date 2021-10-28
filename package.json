@@ -30,7 +30,5 @@
   "scripts": {
     "watch": "gulp watch",
     "build": "gulp build"
-  },
-  "author": "wotkad",
-  "license": "ISC"
+  }
 }
